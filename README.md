@@ -1,2 +1,2 @@
 # Tiger-Hacks-2018
-Website to encourage interesting, engaging, and insightful news that is factually correct.
+It's often difficult to be able to get all of your news in one place. Different sites often have different biases, and getting information from a wide variety of sources is important to stay well informed. 'Just Journalism' was  hackathon idea for TigerHacks (hosted by University of Missouri Columbia), where subscribers can get access to news articles from a variety of different sources. Users can rate the articles, and higher quality content is promoted. 
