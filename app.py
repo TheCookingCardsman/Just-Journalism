@@ -11,6 +11,34 @@ def home():
     else:
         return render_template('index.html')
 
+@app.route('/index.html')
+def index():
+    if not session.get('logged_in'):
+        return render_template('index.html')
+    else:
+        return render_template('index.html')
+
+@app.route('/political.html')
+def politics():
+    if not session.get('logged_in'):
+        return render_template('political.html')
+    else:
+        return render_template('political.html')
+
+@app.route('/sports.html')
+def sports():
+    if not session.get('logged_in'):
+        return render_template('sports.html')
+    else:
+        return render_template('sports.html')
+
+@app.route('/health.html')
+def health():
+    if not session.get('logged_in'):
+        return render_template('health.html')
+    else:
+        return render_template('health.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
