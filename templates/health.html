@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/png" href="https://orig00.deviantart.net/b4d7/f/2016/244/9/1/jj_project__bounce___byvenus_by_venustygg-dag2cp2.png"/>
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </style>
@@ -18,28 +20,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <i class="fa fa-remove"></i>
     </a>
     <img src="http://blog.camera.org/archives/just%20journalism%20launched.jpe" style="width:100%;" class="w3-round"><br><br>
-    <h4><b>THE MOST UN-BIASED ARTICLES IN NEWS</b></h4>
+    <h4><b>TOP ARTICLES DAILY</b></h4>
     <p class="w3-text-grey" style="font-size:20px">Categories</p>
   </div>
-  <!-- <div class="w3-bar-block">
-    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>POPULAR</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-  </div> -->
   <div class="w3-bar-block">
     <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>POPULAR</a>
     <a href="political.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>POLITICS</a>
     <a href="sports.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>SPORTS</a>
     <a href="health.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"></i>HEALTH</a>
   </div>
-  <!-- <div class="w3-panel w3-large">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> -->
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -53,8 +42,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <!-- <img src="https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg" style="width:100%; margin-top:2%" class="w3-round"><br><br>
-    <h1><b>Health</b></h1> -->
     <div style="background-image:url(https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg); color:white;  font-size:400%; margin-top:2%;" class="w3-round">
     <div style="background-color: rgba(0, 0, 0, 0.55); padding:5%">
     <h1 style="text-align:center;font-size:100%; border-color:white; border-width:5px; border-style:solid; width:100%;"><b>Health</b></h1>
@@ -69,7 +56,49 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- First Photo Grid-->
+  <div class="w3-row-padding">
   <div class="w3-third w3-container w3-margin-bottom">
     <a href="https://www.nytimes.com/2018/10/12/health/snakebites-treatments-nanoparticles.html" target="_blank"><img src="https://www.bates.edu/news/files/2018/10/GloveBoxSingleSampleSide-1-toned-400x267.jpg" alt="Baseball" style="width:100%" class="w3-hover-opacity"></a>
     <div class="w3-container w3-white">
@@ -77,6 +106,63 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
     </div>
 
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+        <input type="radio" id="star55" name="rating5" value="55" /><label class = "full" for="star55"></label>
+        <input type="radio" id="star45" name="rating5" value="45" /><label class = "full" for="star45"></label>
+        <input type="radio" id="star35" name="rating5" value="35" /><label class = "full" for="star35"></label>
+        <input type="radio" id="star25" name="rating5" value="25" /><label class = "full" for="star25"></label>
+        <input type="radio" id="star15" name="rating5" value="15" /><label class = "full" for="star15"></label>
+    </fieldset>
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/12/health/memorial-sloan-kettering-cancer-disclosure.html?rref=collection%2Fsectioncollection%2Fhealth&action=click&contentCollection=health&region=rank&module=package&version=highlights&contentPlacement=1&pgtype=sectionfront" target="_blank"><img src="https://static01.nyt.com/images/2018/10/13/science/13MSK-print/merlin_145172820_1fc44357-0a1a-4135-9672-2c7b68932db3-superJumbo.jpg?quality=90&auto=webp" alt="Baseball" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>Sloan Kettering Researchers Correct the Record by Revealing Company Ties</b></p>
+        <p>Top researchers at Memorial Sloan Kettering Cancer Center have filed at least seven corrections with medical journals recently, divulging financial relationships with health care companies that they did not previously disclose.</p>
+      </div>
 
 
 
@@ -130,8 +216,335 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 
 
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="https://www.cnn.com/2018/10/12/health/climate-change-health-effects/index.html" target="_blank"><img src="https://climate.nasa.gov/system/content_pages/main_images/1320_effects-image.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>How climate change will affect your health</b></p>
+        <p>Panel on Climate Change warns of dire consequences if governments don't make "rapid, far-reaching, and unprecedented changes in all aspects of society" to stem global warming. </p>
+      </div>
+
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star53" name="rating3" value="53" /><label class = "full" for="star53"></label>
+          <input type="radio" id="star43" name="rating3" value="43" /><label class = "full" for="star43"></label>
+          <input type="radio" id="star33" name="rating3" value="33" /><label class = "full" for="star33"></label>
+          <input type="radio" id="star23" name="rating3" value="23" /><label class = "full" for="star23"></label>
+          <input type="radio" id="star13" name="rating3" value="13" /><label class = "full" for="star13"></label>
+      </fieldset>
+
+
+
+
+
+
+
+    </div>
   </div>
-  <div class="w3-third w3-container">
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.newscientist.com/article/2182379-we-can-harness-algae-with-magnets-to-deliver-drugs-inside-our-bodies/" target="_blank"><img src="https://images.newscientist.com/wp-content/uploads/2018/10/12111032/gettyimages-168835166.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>We can harness algae with magnets to deliver drugs inside our bodies</b></p>
+        <p>Algae aren’t just scum on the top of a lake: some of the microbes can swim surprisingly fast – outpacing even the micromachines designed to one day deliver drugs inside the human body.</p>
+      </div>
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+          <input type="radio" id="star52" name="rating2" value="52" /><label class = "full" for="star52"></label>
+          <input type="radio" id="star42" name="rating2" value="42" /><label class = "full" for="star42"></label>
+          <input type="radio" id="star32" name="rating2" value="32" /><label class = "full" for="star32"></label>
+          <input type="radio" id="star22" name="rating2" value="22" /><label class = "full" for="star22"></label>
+          <input type="radio" id="star12" name="rating2" value="12" /><label class = "full" for="star12"></label>
+    </fieldset>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.livescience.com/63818-easy-identify-people-genetic-databases.html" target="_blank"><img src="https://img.purch.com/h/1400/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwMi8xMjAvb3JpZ2luYWwvc2h1dHRlcnN0b2NrXzc2NjA5MzkyNy5qcGc=" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>There's a Good Chance Your Relatives' DNA Is Online. That Means People Can Find You, Too.</b></p>
+        <p>When the notorious "Golden State Killer" — known for a series of rapes and murders in California in the 1970s and 1980s — was caught last April, it spurred a collective sigh of relief. ”</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star51" name="rating1" value="51" /><label class = "full" for="star51"></label>
+          <input type="radio" id="star41" name="rating1" value="41" /><label class = "full" for="star41"></label>
+          <input type="radio" id="star31" name="rating1" value="31" /><label class = "full" for="star31"></label>
+          <input type="radio" id="star21" name="rating1" value="21" /><label class = "full" for="star21"></label>
+          <input type="radio" id="star11" name="rating1" value="11" /><label class = "full" for="star11"></label>
+      </fieldset>
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="https://www.sciencedaily.com/releases/2018/10/181011143112.htm" target="_blank"><img src="https://www.sciencedaily.com/images/2018/10/181011143112_1_540x360.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>Human retinas grown in a dish explain how color vision develops</b></p>
+        <p>Biologists at Johns Hopkins University grew human retinas from scratch to determine how cells that allow people to see in color are made.</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star50" name="rating0" value="50" /><label class = "full" for="star50"></label>
+          <input type="radio" id="star40" name="rating0" value="40" /><label class = "full" for="star40"></label>
+          <input type="radio" id="star30" name="rating0" value="30" /><label class = "full" for="star30"></label>
+          <input type="radio" id="star20" name="rating0" value="20" /><label class = "full" for="star20"></label>
+          <input type="radio" id="star10" name="rating0" value="10" /><label class = "full" for="star10"></label>
+      </fieldset>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Pagination -->
   <div class="w3-center w3-padding-32">
@@ -145,41 +558,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-  <!-- Images of Me -->
-  <!-- <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-      <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
-    </div>
-    <div class="w3-col m6">
-      <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
-    </div>
-  </div> -->
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <!-- <h4><b>About Me</b></h4>
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p> -->
-    <!-- <hr>
 
-    <h4>Technical Skills</h4> -->
-    <!-- Progress bars / Skills -->
-    <!-- <p>Photography</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>Web Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>Photoshop</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr> -->
 
     <h4 style="margin:0,auto; text-align:center; font-size:500%">Plans</h4>
     <!-- Pricing Tables -->
@@ -269,46 +650,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </form>
   </div>
 
-  <!-- Footer -->
-  <!-- <footer class="w3-container w3-padding-32 w3-dark-grey">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
 
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-      </p>
-    </div>
-
-  </div>
-  </footer>
-
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div> -->
 
 <!-- End page content -->
 </div>
