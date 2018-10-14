@@ -1,0 +1,1129 @@
+{% if session['logged_in'] %}
+<!DOCTYPE html>
+<html>
+<title>Just Journalism</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="http://blog.camera.org/archives/just%20journalism%20launched.jpe" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>TOP ARTICLES DAILY</b></h4>
+    <p class="w3-text-grey" style="font-size:20px">Categories</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"></i>POPULAR</a>
+    <a href="political.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>POLITICS</a>
+    <a href="sports.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>SPORTS</a>
+    <a href="health.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>HEALTH</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <!-- <img src="https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg" style="width:100%; margin-top:2%" class="w3-round"><br><br>
+    <h1><b>Popular</b></h1> -->
+    <div style="background-image:url(https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg); color:white;  font-size:400%; margin-top:2%;" class="w3-round">
+    <div style="background-color: rgba(0, 0, 0, 0.55); padding:5%">
+    <h1 style="text-align:center;font-size:100%; border-color:white; border-width:5px; border-style:solid; width:100%;"><b>Popular</b></h1>
+    </div>
+    </div>
+    <div style="width:100%; padding-top:10px; padding-bottom:10px">
+      <input type="text" placeholder="Search.." name="search" style="padding-right:50%; margin-right:2px; margin-top:5px; margin-bottom:5px">
+      <button type="submit" style="margin-top:5px; margin-bottom:5px"><i class="fa fa-search"></i></button>
+      <div style="float:right">Welcome Admin</div> 
+    </div>
+    <!-- </div> -->
+    </div>
+  </header>
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/12/us/politics/donald-trump-media-coverage.html" target="_blank"><img src="https://static01.nyt.com/images/2018/10/13/us/politics/13dc-memo1/merlin_144935790_f8e4ea3a-c073-439c-bfa8-c885b8443c3f-jumbo.jpg?quality=90&auto=webp" alt="Trump" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>‘Donald Trump in Full’: The President’s Very Talkative, Very Televised Week</b></p>
+        <p>WASHINGTON — Air Force One has become a flying call center, the Oval Office, a revolving door of journalists, dignitaries and celebrities. Rock stars and cabinet secretaries wander the White House driveway, a place that at any given moment can be the site of an impromptu news conference.</p>
+      </div>
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star55" name="rating5" value="55" /><label class = "full" for="star55"></label>
+          <input type="radio" id="star45" name="rating5" value="45" /><label class = "full" for="star45"></label>
+          <input type="radio" id="star35" name="rating5" value="35" /><label class = "full" for="star35"></label>
+          <input type="radio" id="star25" name="rating5" value="25" /><label class = "full" for="star25"></label>
+          <input type="radio" id="star15" name="rating5" value="15" /><label class = "full" for="star15"></label>
+      </fieldset>
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/12/health/snakebites-treatments-nanoparticles.html" target="_blank"><img src="https://www.bates.edu/news/files/2018/10/GloveBoxSingleSampleSide-1-toned-400x267.jpg" alt="Baseball" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>Tiny Nanoparticles to Treat a Huge Problem: Snakebites</b></p>
+        <p>Until recently, if he wanted to study active Ebola virus, research scientist Adam Hume ’03 had to travel thousands of miles to a lab with a Biosafety Level 4 designation.</p>
+      </div>
+
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+        <input type="radio" id="star54" name="rating4" value="54" /><label class = "full" for="star54"></label>
+        <input type="radio" id="star44" name="rating4" value="44" /><label class = "full" for="star44"></label>
+        <input type="radio" id="star34" name="rating4" value="34" /><label class = "full" for="star34"></label>
+        <input type="radio" id="star24" name="rating4" value="24" /><label class = "full" for="star24"></label>
+        <input type="radio" id="star14" name="rating4" value="14" /><label class = "full" for="star14"></label>
+    </fieldset>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="https://www.bates.edu/news/2018/10/12/in-state-of-the-art-labs-bates-alumni-work-toward-ebola-treatments/" target="_blank"><img src="https://static01.nyt.com/images/2018/10/16/science/16SCI-GLOBAL1/16SCI-GLOBAL1-jumbo.jpg?quality=90&auto=webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>IN STATE-OF-THE-ART LABS, BATES ALUMNI WORK TOWARD EBOLA TREATMENTS</b></p>
+        <p>Snakes kill or cripple 500,000 people a year, but antivenins are costly and rare in poor countries. Now scientists are testing injectable nanoparticles that neutralize venom.</p>
+      </div>
+
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star53" name="rating3" value="53" /><label class = "full" for="star53"></label>
+          <input type="radio" id="star43" name="rating3" value="43" /><label class = "full" for="star43"></label>
+          <input type="radio" id="star33" name="rating3" value="33" /><label class = "full" for="star33"></label>
+          <input type="radio" id="star23" name="rating3" value="23" /><label class = "full" for="star23"></label>
+          <input type="radio" id="star13" name="rating3" value="13" /><label class = "full" for="star13"></label>
+      </fieldset>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/13/sports/baseball/brandon-woodruff-postseason-home-runs.html" target="_blank"><img src="https://static01.nyt.com/images/2018/10/14/sports/14tyler1/merlin_145233546_19cff226-ec38-40d8-89aa-7c9c4da07aea-superJumbo.jpg?quality=90&auto=webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>Brandon Woodruff and Postseason Home Runs Out of Nowhere</b></p>
+        <p>MILWAUKEE — When a left-handed-hitting reliever launches a playoff home run off a left-handed pitcher bound for the Hall of Fame — well, let’s just say you don’t see that much in October. Yet it really did happen in the third inning on Friday at Miller Park, in Game 1 of the National League Championship Series, when the Brewers’ Brandon Woodruff connected off the Dodgers’ Clayton Kershaw.</p>
+      </div>
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+          <input type="radio" id="star52" name="rating2" value="52" /><label class = "full" for="star52"></label>
+          <input type="radio" id="star42" name="rating2" value="42" /><label class = "full" for="star42"></label>
+          <input type="radio" id="star32" name="rating2" value="32" /><label class = "full" for="star32"></label>
+          <input type="radio" id="star22" name="rating2" value="22" /><label class = "full" for="star22"></label>
+          <input type="radio" id="star12" name="rating2" value="12" /><label class = "full" for="star12"></label>
+    </fieldset>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="http://www.bates.edu/news/2018/08/16/meet-navy-capt-j-j-cummings-89-commander-of-the-worlds-largest-aircraft-carrier/" target="_blank"><img src="https://www.bates.edu/news/files/2018/08/180810_Cummings_4636362-400x267.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>MEET NAVY CAPT. J.J. CUMMINGS ’89, COMMANDER OF THE WORLD’S LARGEST AIRCRAFT CARRIER</b></p>
+        <p>A few years ago, in a story chronicling life aboard a U.S. aircraft carrier, a New Yorker writer noted that the scope and scale of the captain’s job made it “impossible to get a sense of him outside his captainness.”</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star51" name="rating1" value="51" /><label class = "full" for="star51"></label>
+          <input type="radio" id="star41" name="rating1" value="41" /><label class = "full" for="star41"></label>
+          <input type="radio" id="star31" name="rating1" value="31" /><label class = "full" for="star31"></label>
+          <input type="radio" id="star21" name="rating1" value="21" /><label class = "full" for="star21"></label>
+          <input type="radio" id="star11" name="rating1" value="11" /><label class = "full" for="star11"></label>
+      </fieldset>
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="http://nymag.com/news/features/buzzfeed-2013-4/" target="_blank"><img src="http://images.nymag.com/news/features/buzzfeed130422_1_560.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>Does BuzzFeed Know the Secret?
+Jonah Peretti’s viral-content machine purports to have solved the problems of both journalism and advertising at once, all with the help of a simple algorithm.</b></p>
+        <p>Perhaps you are unfamiliar with the website BuzzFeed—though this is increasingly unlikely, as it’s currently enjoying a viral moment. The site is a hyper­active amalgam: simultaneously a journalism website, a purveyor of funny lists, and a perpetual pop-culture plebiscite where you can vote on articles with bright-yellow buttons reading lol, wtf, and omg.</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star50" name="rating0" value="50" /><label class = "full" for="star50"></label>
+          <input type="radio" id="star40" name="rating0" value="40" /><label class = "full" for="star40"></label>
+          <input type="radio" id="star30" name="rating0" value="30" /><label class = "full" for="star30"></label>
+          <input type="radio" id="star20" name="rating0" value="20" /><label class = "full" for="star20"></label>
+          <input type="radio" id="star10" name="rating0" value="10" /><label class = "full" for="star10"></label>
+      </fieldset>
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4 style="margin:0,auto; text-align:center; font-size:500%">Plans</h4>
+    <!-- Pricing Tables -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Limited Articles</li>
+          <li class="w3-padding-16">Contains Ads</li>
+          <li class="w3-padding-16">..</li>
+          <li class="w3-padding-16">
+            <h2>Free</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16"><b>UNLIMITED</b> Articles</li>
+          <li class="w3-padding-16"><b>NO</b> Ads</li>
+          <li class="w3-padding-16">..</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Family <b>(Best Value!)</b></li>
+          <li class="w3-padding-16"><b>UNLIMITED</b> Articles</li>
+          <li class="w3-padding-16"><b>NO</b> Ads</li>
+          <li class="w3-padding-16"><b>MULTIPLE</b> Accounts</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>justjournalism@noreply.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>ROLLA, MO</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>(421) 832-3934</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+{% else %}
+<!DOCTYPE html>
+<html>
+<title>Just Journalism</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="http://blog.camera.org/archives/just%20journalism%20launched.jpe" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>TOP ARTICLES DAILY</b></h4>
+    <p class="w3-text-grey" style="font-size:20px">Categories</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"></i>POPULAR</a>
+    <a href="political.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>POLITICS</a>
+    <a href="sports.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>SPORTS</a>
+    <a href="health.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"></i>HEALTH</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <!-- <img src="https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg" style="width:100%; margin-top:2%" class="w3-round"><br><br>
+    <h1><b>Popular</b></h1> -->
+    <div style="background-image:url(https://jessicarigakjb222.files.wordpress.com/2017/08/cropped-kjb101-header-copy1.jpg); color:white;  font-size:400%; margin-top:2%;" class="w3-round">
+    <div style="background-color: rgba(0, 0, 0, 0.55); padding:5%">
+    <h1 style="text-align:center;font-size:100%; border-color:white; border-width:5px; border-style:solid; width:100%;"><b>Popular</b></h1>
+    </div>
+    </div>
+    <div style="width:100%; padding-top:10px; padding-bottom:10px">
+      <input type="text" placeholder="Search.." name="search" style="padding-right:50%; margin-right:2px; margin-top:5px; margin-bottom:5px">
+      <button type="submit" style="margin-top:5px; margin-bottom:5px"><i class="fa fa-search"></i></button>
+      <button type="submit" style="margin-top:5px; margin-bottom:5px; float:right;"><i>Sign Up</i></button>
+      <a href="/login"><button type="submit" style="margin-top:5px; margin-bottom:5px; float:right; margin-right:5px"><i>Log In</i></button> </a>
+    </div>
+    <!-- </div> -->
+    </div>
+  </header>
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/12/us/politics/donald-trump-media-coverage.html" target="_blank"><img src="https://static01.nyt.com/images/2018/10/13/us/politics/13dc-memo1/merlin_144935790_f8e4ea3a-c073-439c-bfa8-c885b8443c3f-jumbo.jpg?quality=90&auto=webp" alt="Trump" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>‘Donald Trump in Full’: The President’s Very Talkative, Very Televised Week</b></p>
+        <p>WASHINGTON — Air Force One has become a flying call center, the Oval Office, a revolving door of journalists, dignitaries and celebrities. Rock stars and cabinet secretaries wander the White House driveway, a place that at any given moment can be the site of an impromptu news conference.</p>
+      </div>
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star55" name="rating5" value="55" /><label class = "full" for="star55"></label>
+          <input type="radio" id="star45" name="rating5" value="45" /><label class = "full" for="star45"></label>
+          <input type="radio" id="star35" name="rating5" value="35" /><label class = "full" for="star35"></label>
+          <input type="radio" id="star25" name="rating5" value="25" /><label class = "full" for="star25"></label>
+          <input type="radio" id="star15" name="rating5" value="15" /><label class = "full" for="star15"></label>
+      </fieldset>
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/12/health/snakebites-treatments-nanoparticles.html" target="_blank"><img src="https://www.bates.edu/news/files/2018/10/GloveBoxSingleSampleSide-1-toned-400x267.jpg" alt="Baseball" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>Tiny Nanoparticles to Treat a Huge Problem: Snakebites</b></p>
+        <p>Until recently, if he wanted to study active Ebola virus, research scientist Adam Hume ’03 had to travel thousands of miles to a lab with a Biosafety Level 4 designation.</p>
+      </div>
+
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+        <input type="radio" id="star54" name="rating4" value="54" /><label class = "full" for="star54"></label>
+        <input type="radio" id="star44" name="rating4" value="44" /><label class = "full" for="star44"></label>
+        <input type="radio" id="star34" name="rating4" value="34" /><label class = "full" for="star34"></label>
+        <input type="radio" id="star24" name="rating4" value="24" /><label class = "full" for="star24"></label>
+        <input type="radio" id="star14" name="rating4" value="14" /><label class = "full" for="star14"></label>
+    </fieldset>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="https://www.bates.edu/news/2018/10/12/in-state-of-the-art-labs-bates-alumni-work-toward-ebola-treatments/" target="_blank"><img src="https://static01.nyt.com/images/2018/10/16/science/16SCI-GLOBAL1/16SCI-GLOBAL1-jumbo.jpg?quality=90&auto=webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>IN STATE-OF-THE-ART LABS, BATES ALUMNI WORK TOWARD EBOLA TREATMENTS</b></p>
+        <p>Snakes kill or cripple 500,000 people a year, but antivenins are costly and rare in poor countries. Now scientists are testing injectable nanoparticles that neutralize venom.</p>
+      </div>
+
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star53" name="rating3" value="53" /><label class = "full" for="star53"></label>
+          <input type="radio" id="star43" name="rating3" value="43" /><label class = "full" for="star43"></label>
+          <input type="radio" id="star33" name="rating3" value="33" /><label class = "full" for="star33"></label>
+          <input type="radio" id="star23" name="rating3" value="23" /><label class = "full" for="star23"></label>
+          <input type="radio" id="star13" name="rating3" value="13" /><label class = "full" for="star13"></label>
+      </fieldset>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.nytimes.com/2018/10/13/sports/baseball/brandon-woodruff-postseason-home-runs.html" target="_blank"><img src="https://static01.nyt.com/images/2018/10/14/sports/14tyler1/merlin_145233546_19cff226-ec38-40d8-89aa-7c9c4da07aea-superJumbo.jpg?quality=90&auto=webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>Brandon Woodruff and Postseason Home Runs Out of Nowhere</b></p>
+        <p>MILWAUKEE — When a left-handed-hitting reliever launches a playoff home run off a left-handed pitcher bound for the Hall of Fame — well, let’s just say you don’t see that much in October. Yet it really did happen in the third inning on Friday at Miller Park, in Game 1 of the National League Championship Series, when the Brewers’ Brandon Woodruff connected off the Dodgers’ Clayton Kershaw.</p>
+      </div>
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+    <fieldset class="rating">
+          <input type="radio" id="star52" name="rating2" value="52" /><label class = "full" for="star52"></label>
+          <input type="radio" id="star42" name="rating2" value="42" /><label class = "full" for="star42"></label>
+          <input type="radio" id="star32" name="rating2" value="32" /><label class = "full" for="star32"></label>
+          <input type="radio" id="star22" name="rating2" value="22" /><label class = "full" for="star22"></label>
+          <input type="radio" id="star12" name="rating2" value="12" /><label class = "full" for="star12"></label>
+    </fieldset>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="http://www.bates.edu/news/2018/08/16/meet-navy-capt-j-j-cummings-89-commander-of-the-worlds-largest-aircraft-carrier/" target="_blank"><img src="https://www.bates.edu/news/files/2018/08/180810_Cummings_4636362-400x267.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>MEET NAVY CAPT. J.J. CUMMINGS ’89, COMMANDER OF THE WORLD’S LARGEST AIRCRAFT CARRIER</b></p>
+        <p>A few years ago, in a story chronicling life aboard a U.S. aircraft carrier, a New Yorker writer noted that the scope and scale of the captain’s job made it “impossible to get a sense of him outside his captainness.”</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star51" name="rating1" value="51" /><label class = "full" for="star51"></label>
+          <input type="radio" id="star41" name="rating1" value="41" /><label class = "full" for="star41"></label>
+          <input type="radio" id="star31" name="rating1" value="31" /><label class = "full" for="star31"></label>
+          <input type="radio" id="star21" name="rating1" value="21" /><label class = "full" for="star21"></label>
+          <input type="radio" id="star11" name="rating1" value="11" /><label class = "full" for="star11"></label>
+      </fieldset>
+
+
+
+
+
+
+    </div>
+    <div class="w3-third w3-container">
+      <a href="http://nymag.com/news/features/buzzfeed-2013-4/" target="_blank"><img src="http://images.nymag.com/news/features/buzzfeed130422_1_560.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white"></a>
+        <p><b>Does BuzzFeed Know the Secret?
+Jonah Peretti’s viral-content machine purports to have solved the problems of both journalism and advertising at once, all with the help of a simple algorithm.</b></p>
+        <p>Perhaps you are unfamiliar with the website BuzzFeed—though this is increasingly unlikely, as it’s currently enjoying a viral moment. The site is a hyper­active amalgam: simultaneously a journalism website, a purveyor of funny lists, and a perpetual pop-culture plebiscite where you can vote on articles with bright-yellow buttons reading lol, wtf, and omg.</p>
+      </div>
+
+
+
+
+
+
+      <style>
+      .rating {
+        border: none;
+        float: left;
+      }
+
+      .rating > input { display: none; }
+      .rating > label:before {
+        margin: 5px;
+        font-size: 1.25em;
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f005";
+      }
+
+      .rating > .half:before {
+        content: "\f089";
+        position: absolute;
+      }
+
+      .rating > label {
+        color: #ddd;
+       float: right;
+      }
+
+      /***** CSS Magic to Highlight Stars on Hover *****/
+      .rating > input:checked ~ label, /* show gold star when clicked */
+      .rating:not(:checked) > label:hover, /* hover current star */
+      .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+      .rating > input:checked + label:hover, /* hover current star when changing rating */
+      .rating > input:checked ~ label:hover,
+      .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+      .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+      </style>
+
+      <fieldset class="rating">
+          <input type="radio" id="star50" name="rating0" value="50" /><label class = "full" for="star50"></label>
+          <input type="radio" id="star40" name="rating0" value="40" /><label class = "full" for="star40"></label>
+          <input type="radio" id="star30" name="rating0" value="30" /><label class = "full" for="star30"></label>
+          <input type="radio" id="star20" name="rating0" value="20" /><label class = "full" for="star20"></label>
+          <input type="radio" id="star10" name="rating0" value="10" /><label class = "full" for="star10"></label>
+      </fieldset>
+
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4 style="margin:0,auto; text-align:center; font-size:500%">Plans</h4>
+    <!-- Pricing Tables -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+          <li class="w3-padding-16">Limited Articles</li>
+          <li class="w3-padding-16">Contains Ads</li>
+          <li class="w3-padding-16">..</li>
+          <li class="w3-padding-16">
+            <h2>Free</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
+          <li class="w3-padding-16"><b>UNLIMITED</b> Articles</li>
+          <li class="w3-padding-16"><b>NO</b> Ads</li>
+          <li class="w3-padding-16">..</li>
+          <li class="w3-padding-16">
+            <h2>$ 10</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Family <b>(Best Value!)</b></li>
+          <li class="w3-padding-16"><b>UNLIMITED</b> Articles</li>
+          <li class="w3-padding-16"><b>NO</b> Ads</li>
+          <li class="w3-padding-16"><b>MULTIPLE</b> Accounts</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per month</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>justjournalism@noreply.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>ROLLA, MO</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>(421) 832-3934</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+{% endif %}
