@@ -21,23 +21,27 @@ def index():
 @app.route('/political.html')
 def politics():
     if not session.get('logged_in'):
-        return render_template('political.html')
+        return render_template('loggedout.html')
     else:
         return render_template('political.html')
 
 @app.route('/sports.html')
 def sports():
     if not session.get('logged_in'):
-        return render_template('sports.html')
+        return render_template('loggedout.html')
     else:
         return render_template('sports.html')
 
 @app.route('/health.html')
 def health():
     if not session.get('logged_in'):
-        return render_template('health.html')
+        return render_template('loggedout.html')
     else:
         return render_template('health.html')
+
+@app.route('/loggedout.html')
+def loggedout():
+    return render_template('loggedout.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
